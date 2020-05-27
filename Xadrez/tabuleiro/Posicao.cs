@@ -1,5 +1,6 @@
 ﻿namespace tabuleiro
 {
+    //to show which row and column the part is in
     class Posicao
     {
         public int linha { get; set; }
@@ -11,7 +12,8 @@
             this.coluna = coluna;
         }
 
-           public override string ToString()
+        //Returns a string that represents the current object
+        public override string ToString()
         {
             return linha
                 + ", "

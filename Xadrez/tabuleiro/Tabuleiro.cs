@@ -6,6 +6,7 @@
         public int colunas { get; set; }
         private Peca[,] pecas;
 
+        //method that will return a piece
         public Tabuleiro(int linhas, int colunas)
         {
             this.linhas = linhas;
@@ -30,7 +31,8 @@
             return peca(pos) != null;
         }
 
-        //throw an exception if the place to move the part is occupied
+        /*put a piece p in the pos position,
+        throw an exception if the place to move the part is occupied*/
         public void colocarPeca(Peca p, Posicao pos)
         {
             if (existePeca(pos))

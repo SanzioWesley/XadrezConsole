@@ -13,10 +13,13 @@ namespace xadrez
             this.linha = linha;
         }
 
+
+        //convert the chess position to an internal position of the matrix
         public Posicao toPosicao()
         {
             return new Posicao(8 - linha, coluna - 'a');
         }
+
         public override string ToString()
         {
             return "" + coluna + linha;
