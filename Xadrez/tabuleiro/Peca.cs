@@ -6,7 +6,7 @@
         public Posicao posicao { get; set; }
         //can be changed by itself or by the subclass
         public Cor cor { get; protected set; }
-        public int qtdMovimentos { get; protected set; }
+        public int qteMovimentos { get; protected set; }
         public Tabuleiro tab { get; protected set; }
 
         /*part builder,
@@ -16,7 +16,12 @@
             this.posicao = null;
             this.cor = cor;
             this.tab = tab;
-            this.qtdMovimentos = 0;
+            this.qteMovimentos = 0;
+        }
+
+        public void incrementarQteMovimentos()
+        {
+            qteMovimentos++;
         }
     }
 }
