@@ -1,7 +1,7 @@
 ﻿namespace tabuleiro
 {
     //class Peca is generic class can be any part
-    class Peca
+    abstract class Peca
     {
         public Posicao posicao { get; set; }
         //can be changed by itself or by the subclass
@@ -18,10 +18,12 @@
             this.tab = tab;
             this.qteMovimentos = 0;
         }
-
+        
         public void incrementarQteMovimentos()
         {
             qteMovimentos++;
         }
+
+        public abstract bool[,] movimentosPossiveis();
     }
 }

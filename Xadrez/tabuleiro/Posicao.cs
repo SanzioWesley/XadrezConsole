@@ -12,6 +12,12 @@
             this.coluna = coluna;
         }
 
+        public void definirValores(int linha, int coluna)
+        {
+            this.linha = linha;
+            this.coluna = coluna;
+        }
+
         //Returns a string that represents the current object
         public override string ToString()
         {

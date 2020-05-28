@@ -34,6 +34,8 @@ namespace xadrez
             tab.colocarPeca(new Torre(tab, Cor.Branca), new PosicaoXadrez('e', 1).toPosicao());
             tab.colocarPeca(new Torre(tab, Cor.Branca), new PosicaoXadrez('d', 1).toPosicao());
 
+
+            //tab.colocarPeca(new Peao(tab, Cor.Preta), new PosicaoXadrez('c', 5).toPosicao());
             tab.colocarPeca(new Torre(tab, Cor.Preta), new PosicaoXadrez('c', 7).toPosicao());
             tab.colocarPeca(new Torre(tab, Cor.Preta), new PosicaoXadrez('c', 8).toPosicao());
             tab.colocarPeca(new Torre(tab, Cor.Preta), new PosicaoXadrez('d', 7).toPosicao());
