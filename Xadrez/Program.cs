@@ -9,19 +9,17 @@ namespace Xadrez
         static void Main(string[] args)
         {
 
-            try {
-                //instantiate a new variable
+            try
+            {
                 PartidaDeXadrez partida = new PartidaDeXadrez();
 
-                while (!partida.terminada) {
+                while (!partida.terminada)
+                {
 
                     try
                     {
                         Console.Clear();
-                        Tela.imprimirTabuleiro(partida.tab);
-                        Console.WriteLine();
-                        Console.WriteLine("Turno: " + partida.turno);
-                        Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
+                        Tela.imprimirPartida(partida);
 
                         Console.WriteLine();
                         Console.Write("Origem: ");
@@ -40,17 +38,19 @@ namespace Xadrez
 
                         partida.realizaJogada(origem, destino);
                     }
-                    catch (TabuleiroException e) 
+                    catch (TabuleiroException e)
                     {
                         Console.WriteLine(e.Message);
                         Console.ReadLine();
                     }
                 }
+
             }
             catch (TabuleiroException e)
             {
                 Console.WriteLine(e.Message);
             }
+
             Console.ReadLine();
         }
     }
